@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        .allbgc {
+            width: 1000px;
+            height: 500px;
+            margin: 0 auto;
+        }
+
+        .SW::before {
+            content: "Light";
+            width: 100px;
+            height: 50px;
+            background-color: red;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        input[type="checkbox"]:checked~.SW::before {
+            content: "Dark";
+            background-color: rgb(50, 50, 50);
+            transform: translateX(30px);
+        }
+
+        input[type="checkbox"]:checked~.allbgc {
+            background-color: rgb(50, 50, 50);
+        }
+
+        li {
+            width: 100px;
+            position: relative;
+            /* Để có thể sử dụng pseudo-element */
+        }
+
+        li::after {
+            content: "";
+            /* Pseudo-element cần có nội dung */
+            position: absolute;
+            list-style: none;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            /* Chiều rộng của border-bottom */
+            height: 2px;
+            /* Độ dày của border-bottom */
+            background-color: #333;
+            /* Màu sắc của border-bottom */
+            transform: scaleX(0);
+            /* Ban đầu ẩn border-bottom */
+            transition: transform 0.3s ease;
+            /* Hiệu ứng chuyển đổi */
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" id="Themer">
+    <div class="switch">
+        <div class="hello">
+            <label for="Themer" class="SW"></label>
+        </div>
+
+    </div>
+    <div class="allbgc"></div>
+    <li>TRang chủ</li>
+</body>
+
+</html>

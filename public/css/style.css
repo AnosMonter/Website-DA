@@ -1,0 +1,1935 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Dancing Script", cursive;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    position: relative;
+    margin: 0;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+:root {
+    --background-color: rgba(1, 147, 231, 0.8);
+}
+
+/* ====================================== Header ==================================== */
+header {
+    width: 100%;
+    height: 100px;
+    background-image: linear-gradient(135deg, rgba(230, 150, 1, 0.5)20%, rgba(1, 230, 150, 0.5)40%, rgba(230, 1, 150, 0.5)60%, rgba(200, 1, 1, 0.5)80%), url('../img/Page/Background_R.jpg');
+    position: sticky;
+    opacity: 0.8;
+    top: 0;
+    z-index: 100;
+}
+.Admin-Dashboard{
+    position: absolute;
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(1, 230, 150, 0.5);
+    color: black;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -120px;
+    z-index: 101;
+    border-radius: 10px;
+}
+.header-bar {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 5fr 5fr;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.logo {
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.logo img {
+    width: 80px;
+    height: 80px;
+    display: block;
+    border-radius: 10px;
+    background-color: antiquewhite;
+    ;
+}
+
+.search {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 9fr 1fr;
+    gap: 5px;
+}
+
+.search input[type='text'] {
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+}
+
+.button-search {
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    font-weight: bold;
+    transition: all 1s ease;
+}
+.button-search:hover {
+    background-color: rgb(255, 70, 0);
+    color: white;
+    border: 1px solid gray;
+}
+
+.menu-right {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.menu-right ul {
+    width: 100%;
+    display: flex;
+    font-size: 20px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.menu-right ul li {
+    list-style: none;
+    display: inline-block;
+    white-space: nowrap;
+    padding: 10px;
+    margin: 0;
+}
+
+.Menu-Main {
+    width: 100%;
+    display: flex;
+    text-align: center;
+}
+
+.Menu-Main>li {
+    flex-grow: 1;
+}
+
+.Header-Profile {
+    width: 100%;
+    display: flex;
+    text-align: center;
+}
+
+.Header-Profile>li {
+    flex-grow: 1;
+}
+
+.menu-right ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.menu-right ul li:hover {
+    border-radius: 5px;
+    background-color: white;
+}
+
+/* ======================================= Navigation Bar ======================================= */
+nav.User-Nav-Page {
+    background-color: rgba(66, 26, 31, 0.9);
+    width: 100%;
+    position: sticky;
+    top: 100px;
+    z-index: 100;
+}
+
+.menu {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul {
+    width: 100%;
+    font-size: 20px;
+    display: flex;
+    padding: 0;
+}
+
+.menu ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+    margin: 0;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.menu ul li:hover {
+    background-color: whitesmoke;
+}
+
+.menu ul li:hover a {
+    color: black;
+}
+
+/* ======================================== Themmer ============================================= */
+.Background-All {
+    width: 100%;
+    min-height: calc(400px + 200px);
+    background-color: whitesmoke;
+    margin: 0;
+}
+
+.White-Dark[type="checkbox"] {
+    display: none;
+}
+
+.Switch {
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+.Switch::before {
+    content: "";
+    width: 30px;
+    position: absolute;
+    left: 0;
+    height: 30px;
+    transition: transform 1s;
+}
+
+.White-Dark[type="checkbox"]:checked~.Switch::before {
+    transform: translateX(30px);
+    background-color: rgb(50, 50, 50);
+}
+
+.White-Dark[type="checkbox"]:checked~.Background-All {
+    color: white;
+    background-color: rgb(50, 50, 50);
+}
+
+/* =========================================== Banner =============================================== */
+article {
+    width: 100%;
+    min-height: 300px;
+    padding: 20px;
+}
+
+.Banner {
+    width: 1000px;
+    height: 500px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+    background-size: cover;
+    animation: Banner_Show 15s ease-in-out infinite;
+}
+
+@keyframes Banner_Show {
+    0% {
+        background-image: url('../img/Banner/Beige\ Black\ Modern\ Photo\ Collage\ Summer\ New\ Collection\ Banner.png');
+    }
+
+    20% {
+        background-image: url('../img/Banner/Brown\ Furniture\ Sale\ Banner.png');
+    }
+
+    40% {
+        background-image: url('../img/Banner/Brown\ Minimalist\ Home\ Interior\ Design\ Banner.png');
+    }
+
+    60% {
+        background-image: url('../img/Banner/Grey\ Modern\ Furniture\ Promotion\ Banner.png');
+    }
+
+    80% {
+        background-image: url('../img/Banner/Blue\ Modern\ Real\ Estate\ Banner.png');
+    }
+
+    100% {
+        background-image: url('../img/Banner/Beige\ Black\ Modern\ Photo\ Collage\ Summer\ New\ Collection\ Banner.png');
+    }
+}
+
+/* ========================================== Home =============================================== */
+
+.Category-Grid {
+    width: 100%;
+    display: grid;
+    grid-template: .5fr .5fr /repeat(6, 1fr);
+    gap: 10px;
+    backdrop-filter: blur(5px);
+}
+
+.Product-Category {
+    width: 100%;
+    aspect-ratio: 3/4;
+    border-radius: 115px 115px 0 0;
+    padding: 5px;
+    display: grid;
+    grid-template-rows: 4fr 1fr;
+    box-shadow: 0 0 2px black;
+    transition: all 1s;
+    background-color: rgb(240, 240, 240);
+}
+
+.Product-Category:hover {
+    transform: translateY(-10px);
+    background-color: rgba(1, 230, 150, 0.5);
+}
+
+.Product-Category img {
+    width: 100%;
+    aspect-ratio: 1;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.Product-Category h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Sale-Grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.Title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.Title h1 {
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+}
+
+.Product-Sale {
+    position: relative;
+    height: 400px;
+    box-shadow: 0 0 2px rgba(0, 0, 0);
+    padding: 5px;
+    display: grid;
+    grid-template-rows: 7fr 3fr;
+    border-radius: 100px 0 100px 0;
+    backdrop-filter: blur(5px);
+    background-color: rgb(240, 240, 240);
+}
+
+.img-product {
+    overflow: hidden;
+}
+
+.img-product img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100px 0 0 0;
+}
+
+.info-product {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+}
+
+.info-product h5 {
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(250, 50, 50);
+}
+
+.info-product del {
+    font-size: 15px;
+    color: rgb(125, 125, 125);
+    font-weight: bold;
+}
+
+.Prd-Sale {
+    padding: 10px 20px;
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    line-height: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px 0 0 10px;
+    background-color: rgba(250, 200, 200, 0.7);
+}
+.Rank-Table{
+    width: 100%;
+    min-height: 400px;
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
+    gap: 5px;
+    backdrop-filter: blur(5px);
+    padding: 5px;
+    margin: 10px auto;
+}
+.Rank-Table-Left{
+    width: 100%;
+}
+.Rank-Table-Left h2{
+    width: 100%;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 25px;
+}
+.Rank-Table-Banner{
+    width: 100%;
+    aspect-ratio: 2/1;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+    background-size: cover;
+    animation: Slide_Banner 15s ease-in-out infinite;
+}
+
+@keyframes Slide_Banner{
+    0% {
+        background-image: url('../img/Banner/Beige\ Black\ Modern\ Photo\ Collage\ Summer\ New\ Collection\ Banner.png');
+    }
+    20% {
+        background-image: url('../img/Banner/Brown\ Furniture\ Sale\ Banner.png');
+    }
+    40% {
+        background-image: url('../img/Banner/Brown\ Minimalist\ Home\ Interior\ Design\ Banner.png');
+    }
+    60% {
+        background-image: url('../img/Banner/Grey\ Modern\ Furniture\ Promotion\ Banner.png');
+    }
+    80% {
+        background-image: url('../img/Banner/Blue\ Modern\ Real\ Estate\ Banner.png');
+    }
+    100% {
+        background-image: url('../img/Banner/Beige\ Black\ Modern\ Photo\ Collage\ Summer\ New\ Collection\ Banner.png');
+    }
+}
+
+.Rank-Table-Right{
+    width: 100%;
+}
+.Rank-Table-Right h2{
+    width: 100%;
+    margin: 0 auto;
+}
+.Rank-Table-Content{
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(5,minmax(100px,1fr));
+    gap: 1px;
+}
+.Rank-Table-Card {
+    width: 100%;
+    aspect-ratio: 3/.86;
+    padding: 2px;
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(240, 240, 240);
+}
+
+.Rank-Table-Card img{
+    height: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 10px;
+    gap: 5px;
+}
+.Rank-Table-Card-Description{
+    width: calc(100% * 0.66);
+    padding: 5px;
+}
+.Rank-Table-Card h3{
+    width: 100%;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 10px;
+}
+.Rank-Table-Card h4{
+    width: 100%;
+    font-size: 13px;
+    color: rgb(250, 50, 50);
+}
+.Rank-Table-Card h5{
+    width: 100%;
+    font-size: 12px;
+}
+/* ========================================== Product Page User =============================================== */
+.Product-Page-All-Product{
+    width: 1200px;
+    min-height: 800px;
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+}
+.Product-Page-Category {
+    width: 100%;
+    min-height: 400px;
+    position: relative;
+}
+.Product-Page-Category ul{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: orangered;
+    justify-content: center;
+    padding: 1px;
+    text-align: center;
+    position: sticky;
+    top: 150px;
+}
+
+.Product-Page-Category ul .A_Cat{
+    width: 100%;
+    background-color: white;
+    margin-top: 1px;
+    white-space: nowrap;
+}
+.Product-Page-Products-Frame{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+}
+.Product-Page-Product{
+    aspect-ratio: 2/2.8;
+    margin: 10px;
+    background-color: rgb(240, 240, 240);
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0);
+    padding: 10px;
+}
+
+.Product-Page-Product img{
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.Product-Page-Product p{
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
+}
+.Product-Page-Product p del{
+    font-size: 13px;
+    color: rgb(125, 125, 125);
+}
+/* ========================================== User =============================================== */
+.User-Page {
+    width: 100%;
+    min-height: 800px;
+    background-size: cover;
+    background-image: url('../img/Page/Horizon.jpg');
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.Notification {
+    width: 100%;
+    padding: 10px;
+    position: absolute;
+    top: 20px;
+}
+
+.Show-Notification {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+    padding: 5px;
+    background-color: rgba(250, 250, 250, 0);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+.Notification-Detail{
+    width: 100%;
+    padding: 20px;
+    line-height: 40px;
+    position: absolute;
+}
+
+.Box-Log-Reg {
+    display: none;
+}
+
+.Frame {
+    position: relative;
+    width: 800px;
+    height: 600px;
+    box-shadow: 0 0 2px black;
+    background-color: rgba(250, 250, 250, 0.3);
+    backdrop-filter: blur(5px);
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    border-radius: 10px;
+}
+
+.Frame h1 {
+    width: 100%;
+    color: rgb(20, 20, 20);
+    text-align: center;
+    text-shadow: 0 0 3px gray;
+    margin: 0;
+}
+
+.Frame b {
+    width: 100%;
+    text-align: left;
+    font-size: 25px;
+    color: rgb(20, 20, 20);
+    font-weight: bolder;
+}
+
+.Mini-Frame{
+    width: 800px;
+    box-shadow: 0 0 2px black;
+    background-color: rgba(250, 250, 250, 0.3);
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+    border-radius: 10px;
+}
+
+.Mini-Frame h1{
+    width: 100%;
+    text-align: center;
+}
+
+.Register,
+.Login {
+    width: calc(50% - 20px);
+    height: calc(100% - 20px);
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    transition: all 1s ease-in-out;
+}
+
+.Register {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.Login img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    aspect-ratio: 1;
+    margin: 0 auto;
+    background-color: rgba(251, 239, 223, 0.8);
+}
+
+.Login a {
+    width: 200px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bolder;
+    color: rgb(20, 20, 20);
+    text-decoration: none;
+}
+
+.Login a:hover {
+    text-decoration: underline;
+    font-style: italic;
+    color: orangered;
+}
+
+.User-Page input[type="text"],
+.User-Page input[type="password"] {
+    width: calc(100% - 20px);
+    line-height: 30px;
+    padding: 5px 20px;
+    border-radius: 10px;
+    border: none;
+}
+
+.User-Page input[type="submit"] {
+    width: 200px;
+    line-height: 30px;
+    background-color: rgb(10, 130, 255);
+    border: none;
+    border-radius: 10px;
+    font-weight: bolder;
+    font-size: 18px;
+    color: white;
+    transition: all 0.5s ease-in-out;
+    margin: 5px auto;
+}
+
+.User-Page input[type="submit"]:hover {
+    cursor: pointer;
+    background-color: rgb(255, 255, 255, 0.8);
+    color: rgb(20, 20, 20);
+}
+
+.Hide-Form {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 100px 10px 10px 40px;
+    width: 50%;
+    height: 100%;
+    background-image: url('../img/Page/UserPageHide.jpg');
+    background-size: cover;
+    z-index: 6;
+    transition: all ease-in-out 1s;
+}
+
+.Login_Button,
+.Register_Button {
+    left: 50%;
+    top: 50%;
+    width: 200px;
+    height: 50px;
+    font-size: 25px;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 2px black;
+    background-color: rgba(250, 250, 250, 0.5);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    z-index: 7;
+    transition: all ease-in-out 0.5s;
+    border-radius: 10px;
+}
+
+.Login_Button {
+    opacity: 0;
+}
+
+.Register_Button {
+    opacity: 1;
+}
+
+.Box-Log-Reg:checked~.Hide-Form {
+    transform: translateX(-400px);
+    border-radius: 10px 40px 100px 10px;
+}
+
+.Box-Log-Reg:checked~.Hide-Form>.Register_Button {
+    opacity: 0;
+}
+
+.Box-Log-Reg:checked~.Hide-Form>.Login_Button {
+    opacity: 1;
+}
+
+.Box-Log-Reg:checked~.Login {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.Box-Log-Reg:checked~.Register {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/* ========================================== Profile Page =============================================== */
+.Profile {
+    width: 100%;
+    min-height: 800px;
+    background-size: cover;
+    background-image: url('../img/Page/Horizon.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.Profile-Farm {
+    border-radius: 10px;
+    width: 1000px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(250, 250, 250, 0.3);
+    display: grid;
+    padding: 10px;
+    margin: 200px auto;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.Old-Profile {
+    width: 100%;
+    min-height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.Avatar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Avatar img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    aspect-ratio: 1;
+    margin: 0 auto;
+    object-fit: cover;
+    background-color: rgba(251, 239, 223, 0.8);
+    border: 3px solid rgb(240, 240, 240);
+    box-shadow: 0 0 -2px black;
+}
+
+.No-Avatar {
+    width: 200px;
+    height: 200px;
+    background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+    font-size: 100px;
+    font-weight: bolder;
+    color: white;
+    text-shadow: 0 0 2px black;
+    border: 2px double white;
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Old-Profile fieldset,
+.Update-Profile fieldset,
+.Update-Password fieldset {
+    width: 100%;
+    padding: 0;
+    line-height: 25px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-color: black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Old-Profile fieldset legend,
+.Update-Password legend,
+.Update-Profile legend {
+    padding: 0 10px;
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    text-shadow: 0 0 2px white;
+}
+
+.Old-Profile fieldset a,
+.Old-Profile fieldset p {
+    width: 100%;
+    padding: 0 5px;
+    text-decoration: none;
+    color: black;
+}
+
+.Old-Profile fieldset a:hover {
+    text-decoration: underline;
+    font-style: italic;
+    color: orangered;
+}
+
+.Show-Info {
+    width: 100%;
+    padding: 10px;
+}
+
+.Profile-Updates {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+}
+
+.Select-Box-Change {
+    display: none;
+}
+
+.Select-Change {
+    width: 100%;
+    height: 50px;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.Select-Change label {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 0 0 2px white;
+    z-index: 3;
+    transition: all 1s ease-in-out;
+}
+
+.Select-Label-UpProfile {
+    color: white;
+}
+
+.Show-Select-Change {
+    width: calc(50% - 10px);
+    height: calc(100% - 10px);
+    margin: 5px;
+    border-radius: 50px;
+    background-color: orangered;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    transition: all 1s ease-in-out;
+}
+
+.Update-Profile,
+.Update-Password {
+    width: calc(100% - 40px);
+    border-radius: 10px;
+    padding: 20px;
+    position: absolute;
+    transition: all 1s ease-in-out;
+    top: 80px;
+}
+
+.Update-Profile input,
+.Update-Password input {
+    width: 100%;
+    padding: 0 10px;
+    line-height: 25px;
+    border: none;
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+.Update-Profile input:focus,
+.Update-Password input:focus {
+    outline: none;
+    background-color: orangered;
+}
+
+.Update-Profile input[type='submit'],
+.Update-Password input[type='submit'] {
+    width: 100%;
+    line-height: 30px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+    margin: 10px auto;
+    border-radius: 10px;
+    background-color: rgb(0, 120, 200);
+    color: white;
+    transition: all 1s;
+}
+
+.Update-Profile input[type='submit']:hover,
+.Update-Password input[type='submit']:hover {
+    background-color: white;
+    color: rgb(0, 120, 200);
+}
+
+.Update-Password {
+    opacity: 0;
+    z-index: -1;
+    transform: scale(0.8);
+}
+
+.Select-Box-Change:checked~.Update-Password {
+    opacity: 1;
+    z-index: 5;
+    transform: scale(1);
+}
+
+.Select-Box-Change:checked~.Update-Profile {
+    opacity: 0;
+    z-index: -1;
+    transform: scale(0.8);
+}
+
+.Select-Box-Change:checked~.Select-Change>.Show-Select-Change {
+    transform: translateX(calc(100% + 10px));
+}
+
+.Select-Box-Change:checked~.Select-Change>.Select-Label-UpPassword {
+    color: white;
+}
+
+.Select-Box-Change:checked~.Select-Change>.Select-Label-UpProfile {
+    color: black;
+}
+
+
+/*========================================== Product-Admin ====================================== */
+.Admin-Product {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    position: relative;
+}
+
+.Admin-Product-Frame {
+    width: 1000px;
+    height: 100%;
+    margin: 200px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+}
+
+.Add-Product {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========================================== Detail =============================================== */
+.Detail-Page {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 10px 0;
+    position: relative;
+}
+
+.Detail-Path-Bar {
+    width: 100%;
+    line-height: 30px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 2px gray;
+    margin: 10px auto;
+    padding: 5px;
+}
+
+.Detail-Content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 5px;
+    margin: 5px auto;
+    box-shadow: 0 0 2px gray;
+}
+
+.Detail-Left-Image {
+    aspect-ratio: 1;
+    background-color: rgb(250, 250, 250);
+    display: grid;
+    grid-template-rows: 8fr 2fr;
+    gap: 5px;
+}
+
+.Detail-Main-Images {
+    width: 100%;
+    background-color: gray;
+    overflow: hidden;
+}
+.Detail-Main-Images img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.Detail-More-Images {
+    width: 100%;
+    padding: 3px 0;
+    display: flex;
+    gap: 0 2px;
+}
+.Detail-More-Images img{
+    width: calc(100% / 5);
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 3/3.5;
+}
+
+.Detail-More-Images-Card{
+    width: 100%;
+    background-color: gray;
+    object-fit: cover;
+    aspect-ratio: 3/3.5;
+}
+
+.Detail-Left-Info {
+    padding: 20px;
+    position: relative;
+}
+
+.Price-Detail{
+    width: 100%;
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+}
+.Price-Detail del{
+    color: gray;
+    font-size: 15px;
+}
+.Detail-Sale {
+    width: 100px;
+    background-color: rgba(1, 147, 231, 0.5);
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    font-size: 20px;
+    text-align: center;
+    position: absolute;
+    top: 0px;
+    left: -100px;
+    font-weight: bolder;
+}
+.Detail-Left-Add-Cart {
+    padding: 10px;
+    color: white;
+    background-color: rgb(0, 120, 200);
+    border-radius: 5px;
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+    bottom: -150px;
+    left: 0px;
+}
+.Detail-Other {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+}
+
+.Detail-Rating {
+    width: 100%;
+    min-height: 50px;
+    box-shadow: 0 0 2px gray;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 10px auto;
+    padding: 20px;
+}
+
+.Detail-Comment {
+    width: 100%;
+    min-height: 400px;
+    box-shadow: 0 0 2px gray;
+    display: grid;
+    grid-template-rows: 8fr 2fr;
+    gap: 10px;
+    margin: 10px auto;
+}
+.Show-Comment {
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+}
+
+.Write-Comment {
+    width: 100%;
+}
+.Comment-Form {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+}
+.Comment-Form textarea {
+    width: 90%;
+    padding: 10px;
+    height: 100%;
+}
+
+.Detail-Related-Products{
+    width: 100%;
+    box-shadow: 0 0 2px black;
+}
+.Related-Products-Frame {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+    padding: 10px;
+}
+.Related-Products-Product {
+    height: 400px;
+    aspect-ratio: 3/4;
+    box-shadow: 0 0 2px gray;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.Related-Products-Product img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+.Related-Products-Product h4{
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+.Related-Products-Product p{
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    color: red;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========================================== Footer =============================================== */
+footer {
+    width: 100%;
+    background-image: url('../img/Page/Footer.jpeg');
+    background-attachment: fixed;
+    background-size: cover;
+    height: 400px;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.Footer-Content {
+    width: 1200px;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.Footer-Top-Bar {
+    width: 100%;
+    line-height: 50px;
+    background-color: rgba(85, 35, 40, 1);
+}
+
+.Footer-Top {
+    width: 100%;
+    display: flex;
+}
+
+.Shipping-Method {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-left: 1px white dashed;
+}
+
+.Shipping-Method:first-child {
+    border: none;
+}
+
+.Shipping-Method i {
+    margin: 0 5px;
+}
+
+.Footer-Main-Bar {
+    width: 100%;
+    height: 80%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+.Footer-Bottom-Bar {
+    width: 100%;
+    height: 10%;
+    background-color: rgba(250, 250, 250, 0.8);
+    padding: 5px 0;
+    position: absolute;
+    bottom: 0;
+}
+
+.Footer-Content>div {
+    flex-grow: 1;
+}
+
+.Footer-Left {
+    width: 100%;
+}
+
+.Footer-Center {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Footer-Right {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+.Footer-Right i {
+    padding: 0 5px;
+}
+
+/* ==================================== Admin =================================== */
+.Backgrounds-Admins {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.Content-Admin {
+    width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 6fr 2fr;
+    align-items: center;
+}
+
+.header-admin {
+    width: 100%;
+    background-color: rgba(240, 240, 240, 1);
+    box-shadow: 0 0 2px gray;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+}
+
+nav.Admin-Page ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+nav.Admin-Page ul li {
+    margin: 0 10px;
+    list-style-type: none;
+    white-space: nowrap;
+}
+
+.Admin-Logo {
+    font-size: 40px;
+    font-weight: bolder;
+    color: rgb(70, 70, 70);
+}
+
+.Admin-Logo>span {
+    color: rgb(40, 130, 180);
+}
+/* =================================== Admin Page Dashboard ====================================== */
+.Dashboard-Page{
+    width: 100%;
+}
+.Dashboard-Grid{
+    width: 1000px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    gap: 10px;
+}
+.Dashboard_Card{
+    aspect-ratio: 4/2;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(125, 125, 125);
+}
+.Dashboard_Card > h4 {
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+    white-space: nowrap;
+    font-weight: bolder;
+}
+.Dashboard_Card-Value{
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bolder;
+}
+/* =================================== Admin Page Login ====================================== */
+.Backgrounds-Admin-Login {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(240, 240, 240);
+}
+
+.Admin-Login {
+    width: 500px;
+    height: 300px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 2px black;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.Admin-Login label {
+    width: 100%;
+    text-align: center;
+}
+
+.Admin-Login label h1 {
+    width: 100%;
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+.Admin-Login fieldset {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.Admin-Login fieldset input{
+    border: hidden;
+    line-height: 30px;
+    width: 100%;
+}
+.Admin-Login input[type="submit"]{
+    width: 200px;
+    background-color: rgb(50, 140, 250);
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.Admin-Login input[type="submit"]:hover{
+    background-color: white;
+    color: rgb(30, 150, 250);
+    border-color: rgb(30, 150, 250);
+}
+
+/* =================================== Admin Page Products ====================================== */
+
+.Admin-Products-Page{
+    width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px auto;
+}
+.Admin-Products-Page h1{
+    width: 100%;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+.Admin-Add-Product{
+    width: 1000px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+.Admin-Form-Add-Product{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: grid;
+    grid-template-rows: 9.5fr 0.5fr;
+    gap: 5px;
+}
+.Admin-Form-Add-Product input[type="submit"]{
+    width: 100%;
+}
+.Admin-Add-Product-Frame{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+.Add-Frame-Left{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.Add-Frame-Left label{
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+}
+.Add-Frame-Left label input, .Add-Frame-Left label select{
+    width: 100%;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    line-height: 30px;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 0 5px;
+}
+.Add-Frame-Right{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    gap: 10px 0;
+    grid-template: 3fr 5fr 1fr 1fr / 1fr;
+}
+.Add-Frame-Right label textarea{
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: rgb(255, 255, 255);
+    height: calc(100% - 15px);
+    padding: 10px;
+}
+.Add-Frame-Right label input[type="file"]{
+    width: 100%;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: rgb(255, 255, 255);
+    padding: 5px;
+    border-radius: 5px;
+}
+.Admin-Add-Product input[type="submit"]{
+    width: 100%;
+    background-color: rgb(50, 140, 250);
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 auto;
+}
+.Admin-Add-Product input[type="submit"]:hover{
+    background-color: white;
+    color: rgb(30, 150, 250);
+    border-color: rgb(30, 150, 250);
+}
+
+/* =============== Edit Products Page ======================= */
+.Admin-Edit-Product-Page{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.Admin-Edit-Product-Page h1{
+    width: 100%;
+    text-align: center;
+    margin: 50px auto;
+    font-weight: bolder;
+    font-size: 50px;
+}
+.Admin-Edit-Product{
+    width: 1200px;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin: 50px auto;
+}
+.Admin-Form-Edit-Product{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: grid;
+    grid-template-rows: 9.5fr 0.5fr;
+    gap: 5px;
+}
+.Admin-Form-Edit-Product input[type="submit"]{
+    width: 100%;
+}
+.Admin-Edit-Product-Frame{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+.Edit-Frame-Left{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.Edit-Frame-Left label{
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+}
+.Edit-Frame-Left label input, .Edit-Frame-Left label select{
+    width: 100%;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    line-height: 30px;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 0 5px;
+}
+.Edit-Image-Frame{
+    width: 100%;
+    overflow: hidden;
+}
+.Edit-Image-Frame img{
+    width: 100%;
+    display: block;
+    aspect-ratio: 3/4;
+}
+.Edit-Frame-Right{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    gap: 10px 0;
+    grid-template: 3fr 5fr 1fr 1fr / 1fr;
+}
+.Edit-Frame-Right label textarea{
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: rgb(255, 255, 255);
+    height: calc(100% - 15px);
+    padding: 10px;
+}
+.Edit-Frame-Right label input[type="file"]{
+    width: 100%;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: rgb(255, 255, 255);
+    padding: 5px;
+    border-radius: 5px;
+}
+.Admin-Edit-Product input[type="submit"]{
+    width: 100%;
+    background-color: rgb(50, 140, 250);
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 auto;
+}
+.Admin-Edit-Product input[type="submit"]:hover{
+    background-color: white;
+    color: rgb(30, 150, 250);
+    border-color: rgb(30, 150, 250);
+}
+
+/* ============= Delete Product Page ========================= */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

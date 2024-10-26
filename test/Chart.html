@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        .Chart {
+            width: 1000px;
+            max-height: 400px;
+            margin: 0 auto;
+            background-color: whitesmoke;
+            box-shadow: 1px 1px 5px gray;
+        }
+        .Chart canvas{
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Chart">
+        <canvas id="revenueChart" width="600px" height="400px"></canvas>
+    </div>
+    <div id="T1" style="display: none;">1000</div>
+    <div id="T2" style="display: none;">1500</div>
+    <div id="T3" style="display: none;">2000</div>
+    <div id="T4" style="display: none;">1200</div>
+    <div id="T5" style="display: none;">1800</div>
+    <div id="T6" style="display: none;">1500</div>
+    <div id="T7" style="display: none;">3000</div>
+    <div id="T8" style="display: none;">2300</div>
+    <div id="T9" style="display: none;">2600</div>
+    <div id="T10" style="display: none;">2100</div>
+    <div id="T11" style="display: none;">3200</div>
+    <div id="T12" style="display: none;">2500</div>
+    <script>
+        const monthlyRevenueData = [];
+        for (var i = 0; i < 12; i++) {
+            var x = document.getElementById(`T${i + 1}`).innerHTML;
+            var add_data = { month: `Tháng ${i + 1}`, revenue: x };
+            monthlyRevenueData.push(add_data);
+        }
+        const ctx = document.getElementById('revenueChart').getContext('2d');
+        const chart = new Chart(ctx, {
+            type: 'bar', // Loại biểu đồ (có thể thay đổi thành line, pie, etc.)
+            data: {
+                labels: monthlyRevenueData.map(item => item.month),
+                datasets: [{
+                    label: 'Doanh thu',
+                    data: monthlyRevenueData.map(item => item.revenue),
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)', // Màu nền của cột
+                    borderColor: 'rgba(75, 192, 192, 1)', // Màu viền của cột
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true // Để biểu đồ bắt đầu từ giá trị 0
+                    }
+                }
+            }
+        });
+
+    </script>
+</body>
+
+</html>

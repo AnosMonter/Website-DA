@@ -1,0 +1,8 @@
+
+RewriteEngine On
+RewriteRule ^admin/ - [F]
+RewriteRule ^site/ - [F]
+RewriteRule ^system/ - [F]
+
+RewriteRule ^(\w+)$ index.php?action=$1
+RewriteRule ^(\w+)/(\w+)$ index.php?action=$1&useraction=$2
